@@ -31,6 +31,8 @@
 		0C93B0D220B41FB60003550F /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93B0CF20B41FB50003550F /* UserResponse.swift */; };
 		0C93B0D320B41FB60003550F /* UserViewParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93B0D020B41FB60003550F /* UserViewParam.swift */; };
 		0C93B0D420B41FB60003550F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93B0D120B41FB60003550F /* User.swift */; };
+		0CD580F121230AD600BD667D /* UIImageView+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD580EF21230AD600BD667D /* UIImageView+Util.swift */; };
+		0CD580F221230AD600BD667D /* UIColor+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD580F021230AD600BD667D /* UIColor+Util.swift */; };
 		0CFC976D20B405B300018BFC /* UILabel+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC976C20B405B200018BFC /* UILabel+Util.swift */; };
 		0CFC976F20B4073F00018BFC /* String+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC976E20B4073F00018BFC /* String+Util.swift */; };
 		0CFC977120B409A800018BFC /* RequiredRule+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC977020B409A800018BFC /* RequiredRule+Create.swift */; };
@@ -72,6 +74,8 @@
 		0C93B0CF20B41FB50003550F /* UserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		0C93B0D020B41FB60003550F /* UserViewParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewParam.swift; sourceTree = "<group>"; };
 		0C93B0D120B41FB60003550F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0CD580EF21230AD600BD667D /* UIImageView+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Util.swift"; sourceTree = "<group>"; };
+		0CD580F021230AD600BD667D /* UIColor+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Util.swift"; sourceTree = "<group>"; };
 		0CFC976C20B405B200018BFC /* UILabel+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Util.swift"; sourceTree = "<group>"; };
 		0CFC976E20B4073F00018BFC /* String+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Util.swift"; sourceTree = "<group>"; };
 		0CFC977020B409A800018BFC /* RequiredRule+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RequiredRule+Create.swift"; sourceTree = "<group>"; };
@@ -221,8 +225,17 @@
 		0C93B0B820B417890003550F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0CD580F021230AD600BD667D /* UIColor+Util.swift */,
 				0CFC976E20B4073F00018BFC /* String+Util.swift */,
 				0CFC976C20B405B200018BFC /* UILabel+Util.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		0CD580F321230AFB00BD667D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0CD580EF21230AD600BD667D /* UIImageView+Util.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -331,6 +344,7 @@
 		F66937E21EF2590400AD56D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0CD580F321230AFB00BD667D /* Extensions */,
 				0C3EFA9020B558D500CC1106 /* Containers */,
 				F66937E31EF2590C00AD56D4 /* Screens */,
 			);
@@ -536,9 +550,11 @@
 				0C93B0D220B41FB60003550F /* UserResponse.swift in Sources */,
 				0C93B0D320B41FB60003550F /* UserViewParam.swift in Sources */,
 				0C93B0C820B418FF0003550F /* AppSession.swift in Sources */,
+				0CD580F121230AD600BD667D /* UIImageView+Util.swift in Sources */,
 				0C3EFA8F20B54A1C00CC1106 /* UserStore.swift in Sources */,
 				0CFC976F20B4073F00018BFC /* String+Util.swift in Sources */,
 				0CFC977120B409A800018BFC /* RequiredRule+Create.swift in Sources */,
+				0CD580F221230AD600BD667D /* UIColor+Util.swift in Sources */,
 				0C354B302122D134000ED50B /* AppDelegate.swift in Sources */,
 				F66937E51EF2595000AD56D4 /* MainViewModel.swift in Sources */,
 				0C62BA3920B413A20080B742 /* ApiResultStatus.swift in Sources */,
