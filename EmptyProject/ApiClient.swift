@@ -27,6 +27,31 @@ class ApiClient: ApiClientProtocol {
         host = useProduction ? hostProduction : hostStaging
     }
     
+    func getString(path: String, headers: [String: String]) -> Observable<(Bool, String)> {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
+        let manager = SessionManager.default
+        return manager.rx.request(.get, createURL(path: path), headers: populateHeaders(dict: headers))
+            .flatMap { alamofireRequest in
+                alamofireRequest.rx.responseString()
+            }
+            .do(onNext: { (response, string) in
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            },
+                onError: { _ in
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            },
+                onCompleted: {
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            })
+            .map { (response, string) in
+                if response.statusCode == ApiClient.sessionExpiredResponseCode {
+                    AppUtil.getAppDelegate()?.appScreenViewModel.doForceLogout()
+                }
+                return (response.statusCode == ApiClient.successResponseCode, string)
+        }
+    }
+
     func postString(path: String, headers: [String: String], params: [String: Any]) -> Observable<(Bool, String)> {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
@@ -45,6 +70,31 @@ class ApiClient: ApiClientProtocol {
                     UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 })
             .map { (response, string) in
+                return (response.statusCode == ApiClient.successResponseCode, string)
+        }
+    }
+    
+    func putString(path: String, headers: [String: String], params: [String: Any]) -> Observable<(Bool, String)> {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
+        let manager = SessionManager.default
+        return manager.rx.request(.put, createURL(path: path), parameters: params, headers: populateHeaders(dict: headers))
+            .flatMap { alamofireRequest in
+                alamofireRequest.rx.responseString()
+            }
+            .do(onNext: { (response, string) in
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            },
+                onError: { _ in
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            },
+                onCompleted: {
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            })
+            .map { (response, string) in
+                if response.statusCode == ApiClient.sessionExpiredResponseCode {
+                    AppUtil.getAppDelegate()?.appScreenViewModel.doForceLogout()
+                }
                 return (response.statusCode == ApiClient.successResponseCode, string)
         }
     }

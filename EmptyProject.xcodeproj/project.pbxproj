@@ -36,6 +36,7 @@
 		0CFC977120B409A800018BFC /* RequiredRule+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC977020B409A800018BFC /* RequiredRule+Create.swift */; };
 		0CFC977320B40B1100018BFC /* CustomRxOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC977220B40B1100018BFC /* CustomRxOperators.swift */; };
 		0CFC977720B4108200018BFC /* ManageSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC977620B4108200018BFC /* ManageSession.swift */; };
+		0CFF50C82122EC6C0016FB68 /* AppScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF50C72122EC6C0016FB68 /* AppScreenViewModel.swift */; };
 		A7CDF23B20C6A4AE00D19037 /* AppUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CDF23A20C6A4AE00D19037 /* AppUtil.swift */; };
 		A7E75C3B1EF7CA7C0020D838 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E75C3A1EF7CA7C0020D838 /* ViewUtil.swift */; };
 		E9C66FA4329695D543A672E5 /* Pods_EmptyProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12DF9834FCFAC63E3F21124A /* Pods_EmptyProject.framework */; };
@@ -76,6 +77,7 @@
 		0CFC977020B409A800018BFC /* RequiredRule+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RequiredRule+Create.swift"; sourceTree = "<group>"; };
 		0CFC977220B40B1100018BFC /* CustomRxOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRxOperators.swift; sourceTree = "<group>"; };
 		0CFC977620B4108200018BFC /* ManageSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageSession.swift; sourceTree = "<group>"; };
+		0CFF50C72122EC6C0016FB68 /* AppScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppScreenViewModel.swift; sourceTree = "<group>"; };
 		12DF9834FCFAC63E3F21124A /* Pods_EmptyProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmptyProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CF3AF23C2F27BCC53F32BD /* Pods-SweetEscapeChatModeration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SweetEscapeChatModeration.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SweetEscapeChatModeration/Pods-SweetEscapeChatModeration.debug.xcconfig"; sourceTree = "<group>"; };
 		56FF3FAD241CCCAD225A1117 /* Pods-Gojek-ContactsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gojek-ContactsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gojek-ContactsApp/Pods-Gojek-ContactsApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 		F66937E11EF258F800AD56D4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0CFF50C72122EC6C0016FB68 /* AppScreenViewModel.swift */,
 				F66937E41EF2595000AD56D4 /* MainViewModel.swift */,
 			);
 			name = ViewModels;
@@ -524,6 +527,7 @@
 				0C62BA3820B413A20080B742 /* ApiResultStatusViewParam.swift in Sources */,
 				0CFC977320B40B1100018BFC /* CustomRxOperators.swift in Sources */,
 				0C93B0C720B418FF0003550F /* AppSessionUserDefaultsStore.swift in Sources */,
+				0CFF50C82122EC6C0016FB68 /* AppScreenViewModel.swift in Sources */,
 				0C62BA3A20B413A20080B742 /* ApiResultStatusResponse.swift in Sources */,
 				0C93B0D420B41FB60003550F /* User.swift in Sources */,
 				0C93B0BF20B418210003550F /* AuthApi.swift in Sources */,

@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import SwinjectStoryboard
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var appScreenViewModel = SwinjectStoryboard.resolveDefault(AppScreenViewModel.self)!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

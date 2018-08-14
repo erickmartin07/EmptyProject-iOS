@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 class AppUtil {
+    
+    class func getAppDelegate() -> AppDelegate? {
+        return UIApplication.shared.delegate as? AppDelegate
+    }
     
     class func getCurrentAppVersion() -> String {
         var currentAppVersion = ""

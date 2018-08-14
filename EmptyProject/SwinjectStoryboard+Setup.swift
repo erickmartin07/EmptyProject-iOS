@@ -38,6 +38,10 @@ extension SwinjectStoryboard {
         defaultContainer.register(MainViewModel.self) { r in
             MainViewModel(manageSession: r.resolve(ManageSessionProtocol.self)!)
         }
+        
+        defaultContainer.register(AppScreenViewModel.self) { r in
+            AppScreenViewModel()
+        }
     }
     
     private class func registerInteractors() {
