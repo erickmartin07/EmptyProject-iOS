@@ -21,6 +21,7 @@ class ApiClient: ApiClientProtocol {
     
     private var host: String
     private static let successResponseCode = 200
+    private static let badRequestResponseCode = 400
     private static let sessionExpiredResponseCode = 401
     
     init(useProduction: Bool = true) {
@@ -56,7 +57,7 @@ class ApiClient: ApiClientProtocol {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         let manager = SessionManager.default
-        return manager.rx.request(.post, createURL(path: path), parameters: params, headers: populateHeaders(dict: headers))
+        return manager.rx.request(.post, createURL(path: path), parameters: params, encoding: JSONEncoding.default, headers: populateHeaders(dict: headers))
             .flatMap { alamofireRequest in
                 alamofireRequest.rx.responseString()
             }
@@ -78,7 +79,7 @@ class ApiClient: ApiClientProtocol {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         let manager = SessionManager.default
-        return manager.rx.request(.put, createURL(path: path), parameters: params, headers: populateHeaders(dict: headers))
+        return manager.rx.request(.put, createURL(path: path), parameters: params, encoding: JSONEncoding.default, headers: populateHeaders(dict: headers))
             .flatMap { alamofireRequest in
                 alamofireRequest.rx.responseString()
             }

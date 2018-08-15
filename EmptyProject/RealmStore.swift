@@ -11,7 +11,7 @@ import RealmSwift
 
 class RealmStore {
  
-    static let dbVersion: UInt64 = 69
+    static let dbVersion: UInt64 = 1
     var realm: Realm
    
     init(inMemoryId: String? = nil) {
