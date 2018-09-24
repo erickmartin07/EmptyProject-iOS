@@ -29,7 +29,7 @@ class CustomNavigationController: UINavigationController {
     
     private func setupNavigationBarFont() {
         let newFont = UIFont(name: "Lato-Bold", size: 14)!
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font: newFont]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font: newFont]
     }
 
     private func setupAppearance() {
@@ -37,6 +37,6 @@ class CustomNavigationController: UINavigationController {
         navigationBar.backIndicatorImage = UIImage(named: "btnBack")
         navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "btnBack")
         navigationBar.barTintColor = UIColor.white
-        navigationBar.titleTextAttributes = [NSAttributedStringKey.font: newFont, NSAttributedStringKey.foregroundColor: UIColor.black]
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.font: newFont, NSAttributedString.Key.foregroundColor: UIColor.black]
     }
 }

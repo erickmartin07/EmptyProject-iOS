@@ -16,7 +16,7 @@ infix operator <->
 
 func <-> <T>(property: ControlProperty<T?>, variable: Variable<T>) -> Disposable {
     let bindToUIDisposable = variable.asObservable()
-        .bindTo(property)
+        .bind(to: property)
     let bindToVariable = property
         .subscribe(onNext: { n in
                 if let n = n {

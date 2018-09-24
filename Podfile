@@ -6,18 +6,19 @@ use_frameworks!
 inhibit_all_warnings!
 
 def sharedPods
-    pod 'Swinject', '2.0.0'
-    pod 'SwinjectStoryboard', '1.0.0'
-    pod 'RxSwift', '3.0.1'
-    pod 'RxCocoa', '3.0.1'
-    pod 'RxBlocking', '3.0.1'
-    pod 'RxAlamofire', '3.0.2'
-    pod 'ObjectMapper', '2.2.1'
-    pod 'Kingfisher'
-    pod 'KRProgressHUD', '2.1.0'
-    pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :branch => 'swift-3'
-    pod 'RealmSwift', '3.0.1'
-    pod 'IQKeyboardManagerSwift', '5.0.2'
+    pod 'Swinject', '2.5.0'
+    pod 'SwinjectStoryboard', '2.0.2'
+    pod 'RxSwift', '4.3.1'
+    pod 'RxCocoa', '4.3.1'
+    pod 'RxBlocking', '4.3.1'
+    pod 'RxAlamofire', '4.2.0'
+    pod 'ObjectMapper', '3.3.0'
+    pod 'Kingfisher', '4.10.0'
+    pod 'SwiftDate', '5.0.9'
+    pod 'KRProgressHUD', '3.3.0'
+    pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :branch => 'master'
+    pod 'RealmSwift', '3.10.0'
+    pod 'IQKeyboardManagerSwift', '6.1.1'
 end
 
 target 'EmptyProject' do
@@ -27,8 +28,11 @@ end
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
-            config.build_settings['SWIFT_VERSION'] = '3.0'
             config.build_settings['ENABLE_BITCODE'] = 'NO'
+            config.build_settings['SWIFT_VERSION'] = '4.2'
+            if target.name == 'Swinject' || target.name == 'SwinjectStoryboard'
+                config.build_settings['SWIFT_VERSION'] = '3.0'
+            end
         end
     end
 end

@@ -97,8 +97,8 @@ extension String {
         let attributedString = NSMutableAttributedString(string: self)
         let paragraphAttribute = NSMutableParagraphStyle()
         paragraphAttribute.lineSpacing = lineSpace
-        attributedString.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphAttribute, range: NSMakeRange(0, attributedString.length))
-        attributedString.addAttribute(NSAttributedStringKey.font, value: font, range: NSMakeRange(0, attributedString.length))
+        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphAttribute, range: NSMakeRange(0, attributedString.length))
+        attributedString.addAttribute(NSAttributedString.Key.font, value: font, range: NSMakeRange(0, attributedString.length))
         return attributedString
     }
     

@@ -14,10 +14,10 @@ import SwiftValidator
 class ViewUtil {
     
     class func getTopViewController() -> UIViewController? {
-        return UIApplication.shared.delegate?.window??.currentViewController()
+        return UIApplication.shared.delegate?.window??.rootViewController
     }
     
-    class func showAlert(_ style: UIAlertControllerStyle = .alert,
+    class func showAlert(_ style: UIAlertController.Style = .alert,
                          actions: [UIAlertAction],
                          title: String? = nil,
                          message: String? = nil) {
