@@ -11,7 +11,7 @@ def sharedPods
     pod 'RxSwift', '4.3.1'
     pod 'RxCocoa', '4.3.1'
     pod 'RxBlocking', '4.3.1'
-    pod 'RxAlamofire', '4.2.0'
+    pod 'RxAlamofire', '4.3.0'
     pod 'ObjectMapper', '3.3.0'
     pod 'Kingfisher', '4.10.0'
     pod 'SwiftDate', '5.0.9'
