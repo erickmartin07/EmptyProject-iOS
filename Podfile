@@ -7,7 +7,7 @@ inhibit_all_warnings!
 
 def sharedPods
     pod 'Swinject', '2.5.0'
-    pod 'SwinjectStoryboard', '2.0.2'
+    pod 'SwinjectStoryboard', '2.1.0'
     pod 'RxSwift', '4.3.1'
     pod 'RxCocoa', '4.3.1'
     pod 'RxBlocking', '4.3.1'
@@ -30,9 +30,6 @@ post_install do |installer|
         target.build_configurations.each do |config|
             config.build_settings['ENABLE_BITCODE'] = 'NO'
             config.build_settings['SWIFT_VERSION'] = '4.2'
-            if target.name == 'Swinject' || target.name == 'SwinjectStoryboard'
-                config.build_settings['SWIFT_VERSION'] = '3.0'
-            end
         end
     end
 end

@@ -24,8 +24,8 @@ PODS:
   - SwiftDate (5.0.9)
   - SwiftValidator (4.0.0)
   - Swinject (2.5.0)
-  - SwinjectStoryboard (2.0.2):
-    - Swinject (~> 2.4)
+  - SwinjectStoryboard (2.1.0):
+    - Swinject (~> 2.5)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift (= 6.1.1)
@@ -40,7 +40,7 @@ DEPENDENCIES:
   - SwiftDate (= 5.0.9)
   - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
   - Swinject (= 2.5.0)
-  - SwinjectStoryboard (= 2.0.2)
+  - SwinjectStoryboard (= 2.1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -86,8 +86,8 @@ SPEC CHECKSUMS:
   SwiftDate: 52b718d32ec006861a2be2756cbfa482d438e781
   SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
-  SwinjectStoryboard: 365698aec11b57c6b14a3c1f52d0308759d377bf
+  SwinjectStoryboard: 688f096033103e66ffcf6ca678211acd7d7be505
 
-PODFILE CHECKSUM: c2af4e779293de97ec4105463c5d1a68b7301142
+PODFILE CHECKSUM: c0d0e3c222841fd18010fad4d2f0c0f669dfb9c1
 
 COCOAPODS: 1.5.3
